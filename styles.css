@@ -18,7 +18,7 @@
 body {
     /* font stuff */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: linear-gradient(90deg, var(--black-200), var(--black-500));
+    background: linear-gradient(0deg, var(--black-500), var(--black-200));
 }
 
 a {
@@ -26,15 +26,16 @@ a {
 }
 
 header {
-    padding: 10px 25px;
+    padding-right: 15px;
+    padding-bottom: -10px;
     display: flex;
     justify-content:space-between;
-    margin: auto;
+    margin: 10px auto;
     width: 70%;
     max-width: 1100px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     background: radial-gradient(at 50% 0%, #00000000, #ffffff0d);
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 50px;
     position: fixed;
     top: 0;
     left:0; 
@@ -46,11 +47,10 @@ header {
             justify-content: center;
             font-size: 30px;
             color: var(--white-100);
-            background-color: var(--black-200);
-            height: 60px;
-            width: 60px;
+            background-color: var(--black-100);
+            height: 65px;
+            width: 65px;
             border-radius: 50%;
-            margin-right: 20px;
             font-family: "Handjet";
 
             &:hover {
@@ -155,13 +155,17 @@ main {
 
         div {
             height: 1300px;
+            color: var(--black-500);
+            padding-top: 120px;
+            text-align: center;
+            font-family: "Doto";
 
             h1 {
-                color: var(--black-500);
-                padding-top: 120px;
-                text-align: center;
-                font-family: "Handjet";
-                font-size: 40px;
+                font-size: 50px;
+            }
+
+            h3 {
+                font-size: 30px;
             }
         }
     }
