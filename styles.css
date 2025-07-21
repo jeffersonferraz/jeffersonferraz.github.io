@@ -9,13 +9,17 @@
 
 :root {
     /* defining color variables */
+    --white-100: #f5eee6;
     --black-050: #0c0c0c;
     --black-100: #141414;
     --black-200: #1c1c1c;
     --black-500: #282828;
     --orange-100: #fe8019;
     --orange-400: #d66b12;
-    --white-100: #f5eee6;
+    --aqua-100: #689d6a;
+    --blue-100: #458588;
+    --blue-400: #346467;
+    --yellow-100: #d79921;
     --opct-white-200: #f5eee633;
     --opct-white-500: #f5eee580;
     --opct-white-700: #f5eee5b3;
@@ -51,13 +55,13 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 30px;
+        font-size: 38px;
         color: var(--opct-white-700);
         background-color: var(--black-050);
         height: 65px;
         width: 65px;
         border-radius: 50%;
-        font-family: "Handjet";
+        font-family: "Silkscreen";
 
         &:hover {
             box-shadow: 0px 3px 5px var(--black-050);
@@ -80,6 +84,8 @@ header {
                     display: inline-block;
                     font-family: "Silkscreen";
                     font-size: 14px;
+                    width: 130px;
+                    text-align: center;
 
                     &:hover {
                         box-shadow: 0px 3px 5px var(--black-050);
@@ -192,7 +198,7 @@ main {
 
             p {
                 background-color: var(--black-100);
-                border-left: 5px solid var(--opct-white-200);
+                border-left: 5px solid var(--blue-400);
                 border-radius: 0px 5px 5px 0px;
                 font-family: "IBM PLex Mono", monospace;
                 font-weight: 300;
