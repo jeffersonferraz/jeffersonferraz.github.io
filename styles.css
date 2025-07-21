@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     /* Base-config */
     box-sizing: border-box;
     margin: 0;
@@ -7,18 +9,22 @@
 
 :root {
     /* defining color variables */
+    --black-050: #0c0c0c;
     --black-100: #141414;
     --black-200: #1c1c1c;
     --black-500: #282828;
     --orange-100: #fe8019;
+    --orange-400: #d66b12;
     --white-100: #f5eee6;
-    --opct-white-500: #f5eee680;
+    --opct-white-200: #f5eee633;
+    --opct-white-500: #f5eee580;
+    --opct-white-700: #f5eee5b3;
 }
 
 body {
     /* font stuff */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background: linear-gradient(0deg, var(--black-500), var(--black-200));
+    height: 820px;
 }
 
 a {
@@ -29,8 +35,8 @@ header {
     padding-right: 15px;
     padding-bottom: -10px;
     display: flex;
-    justify-content:space-between;
-    margin: 10px auto;
+    justify-content: space-between;
+    margin: 35px auto;
     width: 70%;
     max-width: 1100px;
     backdrop-filter: blur(3px);
@@ -38,67 +44,67 @@ header {
     border-radius: 50px;
     position: fixed;
     top: 0;
-    left:0; 
-    right:0;
+    left: 0;
+    right: 0;
 
     .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            color: var(--white-100);
-            background-color: var(--black-100);
-            height: 65px;
-            width: 65px;
-            border-radius: 50%;
-            font-family: "Handjet";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: var(--opct-white-700);
+        background-color: var(--black-050);
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        font-family: "Handjet";
 
-            &:hover {
-                box-shadow: 0px 3px 5px var(--black-100);
-            }
+        &:hover {
+            box-shadow: 0px 3px 5px var(--black-050);
         }
+    }
 
     nav {
         display: flex;
         align-items: center;
-        
+
         ul {
             display: flex;
             list-style-type: none;
-            gap: 15px;
+            gap: 8px;
 
             li {
                 display: inline-block;
 
-                a{
+                a {
                     display: inline-block;
                     font-family: "Silkscreen";
                     font-size: 14px;
 
                     &:hover {
-                        box-shadow: 0px 3px 5px var(--black-100);
+                        box-shadow: 0px 3px 5px var(--black-050);
                     }
                 }
 
                 .button-one {
-                    color: var(--black-200);
-                    background-color: var(--white-100);
-                    border-radius: 20px;
-                    border: 2px solid var(--black-200);
-                    padding: 8px 30px;
+                    background-color: var(--black-050);
+                    color: var(--white-100);
+                    border-radius: 20px 5px 5px 20px ;
+                    /* border: 2px solid var(--black-200); */
+                    padding: 10px 30px;
                 }
 
                 .button-two {
                     color: var(--white-100);
-                    background: linear-gradient(-20deg, var(--orange-100), var(--black-200), var(--black-200));
+                    background: linear-gradient(-50deg, var(--orange-100), var(--black-050), var(--black-050));
                     border-radius: 5px;
                     padding: 10px 30px;
                 }
 
                 .button-three {
-                    color: var(--black-200);
-                    background-color: var(--orange-100);
-                    border-radius: 20px;
+                    color: var(--black-050);
+                    background-color: var(--orange-400);
+                    border-radius: 5px 20px 20px 5px;
                     padding: 10px 30px;
                 }
             }
@@ -145,27 +151,56 @@ header {
 main {
 
     .container {
-        margin: 100px auto;
+        margin: auto;
+        margin-top: 135px;
         max-width: 600px;
-        
-        border-color: var(--opct-white-200);
-        
-        box-shadow: 0px 0px 0px;
-        background-color: var(--black-100);
+        background-color: var(--black-050);
+        /* border: 6px solid var(--black-050); */
+        padding: 50px 0px;
+        border-radius: 5px;
 
-        div {
-            height: 1300px;
-            color: var(--black-500);
-            padding-top: 120px;
+        .my-name {
+            
+            font-family: "Silkscreen";
             text-align: center;
-            font-family: "Doto";
+            
+            margin: 0px 80px;
+            /* background-color: var(--opct-white-200); */
 
             h1 {
+                text-align: center;
                 font-size: 50px;
+                color: var(--opct-white-500);
+                
             }
 
-            h3 {
-                font-size: 30px;
+            h2 {
+                font-size: 20px;
+                font-weight: 200;
+                color: var(--opct-white-200);
+                
+                
+            }
+
+            
+        }
+
+        .description {
+            
+            border-radius: 5px;
+            padding: 30px 0px;
+
+            p {
+                background-color: var(--black-100);
+                border-left: 5px solid var(--opct-white-200);
+                border-radius: 0px 5px 5px 0px;
+                font-family: "IBM PLex Mono", monospace;
+                font-weight: 300;
+                color: var(--opct-white-500);
+                text-align: left;
+                margin: 0px 80px;
+                padding: 20px 20px 40px 25px;
+                height: 200px;
             }
         }
     }
