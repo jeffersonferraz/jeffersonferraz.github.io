@@ -30,7 +30,6 @@
 
 body {
     background: linear-gradient(0deg, var(--black-500), var(--black-200));
-    height: 820px;
 }
 
 a {
@@ -70,6 +69,11 @@ header {
         margin-left: -30px;
         margin-top: -6px;
 
+        img {
+            height: 54px;
+            opacity: 0.7;
+        }
+
         &:hover {
             box-shadow: 0px 3px 5px var(--black-050);
         }
@@ -101,14 +105,14 @@ header {
 
                 .button-one {
                     background-color: var(--black-050);
-                    color: var(--white-100);
+                    color: var(--opct-white-700);
                     border-radius: 20px 5px 5px 20px ;
                     /* border: 2px solid var(--black-200); */
                     padding: 10px 30px;
                 }
 
                 .button-two {
-                    color: var(--white-100);
+                    color: var(--opct-white-700);
                     background: linear-gradient(-50deg, var(--orange-100), var(--black-050), var(--black-050));
                     border-radius: 5px;
                     padding: 10px 30px;
@@ -162,6 +166,7 @@ header {
 }
 
 main {
+    margin-bottom: 0;
 
     .container {
         margin: auto;
@@ -176,30 +181,25 @@ main {
             
             font-family: "Silkscreen";
             text-align: center;
-            
             margin: 0px 80px;
             /* background-color: var(--opct-white-200); */
 
             h1 {
                 text-align: center;
                 font-size: 50px;
-                color: var(--opct-white-500);
-                
+                color: var(--opct-white-700);
             }
 
             h2 {
                 font-size: 20px;
                 font-weight: 200;
                 color: var(--opct-white-200);
-                
-                
             }
 
             
         }
 
         .description {
-            
             border-radius: 5px;
             padding: 30px 0px;
 
@@ -209,12 +209,48 @@ main {
                 border-radius: 0px 5px 5px 0px;
                 font-family: "IBM PLex Mono", monospace;
                 font-weight: 300;
+                font-size: 14px;
                 color: var(--opct-white-500);
                 text-align: left;
                 margin: 0px 80px;
                 padding: 20px 20px 40px 25px;
                 height: 200px;
             }
+        }
+    }
+}
+
+footer {
+    position: relative;
+    margin: auto;
+    margin-top: 400px;
+    width: 600px;
+    background-color: var(--black-050);
+    border-radius: 5px 5px 0px 0px;
+
+    span {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        .fa-github, .fa-linkedin, .fa-instagram {
+            color: var(--opct-white-700);
+            padding-top: 30px;
+            font-size: 26px;
+        }
+    }
+    
+    p {
+        font-family: "IBM Plex Mono";
+        font-size: 10px;
+        font-weight: 200;
+        color: var(--opct-white-500);
+        text-align: center;
+        padding: 60px 0px 10px 0px;
+        
+        big {
+            font-weight: 500;
+            color: var(--opct-white-700);
         }
     }
 }
