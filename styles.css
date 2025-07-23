@@ -16,6 +16,7 @@
     --black-500: #282828;
     --orange-100: #fe8019;
     --orange-400: #d66b12;
+    --orange-500: #a0500d;
     --aqua-100: #689d6a;
     --blue-100: #458588;
     --blue-400: #346467;
@@ -29,7 +30,29 @@
 }
 
 body {
-    background: linear-gradient(0deg, var(--black-500), var(--black-200));
+    background: linear-gradient(0deg, var(--black-500), var(--black-100));
+}
+
+.background {
+    background-size: 260px;
+    background-repeat: repeat-x;
+    background-blend-mode: multiply;
+    margin: auto;
+    position: relative;
+    opacity: 0.35;
+    width: 610px;
+    height: 210px;
+    z-index: -2;
+}
+
+#top {
+    background-image: url(./assets/pixel-top.svg);
+    opacity: 0.48;
+}
+
+#bottom {
+    background-image: url(./assets/pixel-bottom.svg);
+
 }
 
 a {
@@ -49,7 +72,7 @@ header {
     background: radial-gradient(at 50% 0%, #ffffff08, #ffffff0d);
     /* background: radial-gradient(at 50% 0%, #00000039, #00000056); */
     border-radius: 5px 50px 50px 5px;
-    /* border: 1px solid var(--opct-white-200); */
+    border: 1px solid var(--opct-white-200);
     position: fixed;
     top: 0;
     left: 0;
@@ -170,12 +193,12 @@ main {
 
     .container {
         margin: auto;
-        margin-top: 125px;
-        max-width: 600px;
+        margin-top: 0px;
+        max-width: 610px;
         background-color: var(--black-050);
-        /* border: 6px solid var(--black-050); */
+        /* border: 2px solid var(--opct-white-200); */
         padding: 50px 0px;
-        border-radius: 5px;
+        /* border-radius: 5px; */
 
         .my-name {
             
@@ -205,7 +228,7 @@ main {
 
             p {
                 background-color: var(--black-100);
-                border-left: 5px solid var(--blue-400);
+                border-left: 5px solid var(--orange-500);
                 border-radius: 0px 5px 5px 0px;
                 font-family: "IBM PLex Mono", monospace;
                 font-weight: 300;
@@ -223,10 +246,11 @@ main {
 footer {
     position: relative;
     margin: auto;
-    margin-top: 400px;
+    margin-top: 210px;
     width: 600px;
     background-color: var(--black-050);
     border-radius: 5px 5px 0px 0px;
+    bottom: 0;
 
     span {
         display: flex;
