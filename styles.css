@@ -103,13 +103,18 @@ header {
         margin-left: -30px;
         margin-top: -7px;
 
-        img {
+        #bolt {
+            position: absolute;
             height: 54px;
-            opacity: 0.7;
+            opacity: 0.8;
         }
 
         &:hover {
-            box-shadow: 0px 3px 5px var(--black-050);
+            box-shadow: 0px 3px 5px var(--black-020);
+
+            #bolt {
+                opacity: 1;
+            }
         }
     }
 
@@ -120,7 +125,7 @@ header {
         ul {
             display: flex;
             list-style-type: none;
-            gap: 8px;
+            gap: 4px;
 
             li {
                 display: inline-block;
@@ -128,34 +133,33 @@ header {
                 a {
                     display: inline-block;
                     font-family: "Silkscreen";
-                    font-size: 14px;
-                    width: 130px;
+                    font-size: 15px;
+                    width: 142px;
                     text-align: center;
 
                     &:hover {
-                        box-shadow: 0px 3px 5px var(--black-050);
+                        box-shadow: 0px 3px 5px var(--black-020);
                     }
                 }
 
                 .button-one {
-                    background-color: var(--black-050);
                     color: var(--cream-200);
-                    border-radius: 20px 5px 5px 20px ;
-                    /* border: 2px solid var(--black-200); */
+                    background-color: var(--black-050);
+                    border-radius: 20px 2px 2px 20px ;
                     padding: 10px 30px;
                 }
 
                 .button-two {
                     color: var(--cream-200);
-                    background: linear-gradient(-50deg, var(--orange-100), var(--black-050), var(--black-050));
-                    border-radius: 5px;
+                    background: linear-gradient(-50deg, var(--orange-400), var(--black-050), var(--black-050));
+                    border-radius: 2px;
                     padding: 10px 30px;
                 }
 
                 .button-three {
                     color: var(--black-020);
-                    background-color: var(--orange-400);
-                    border-radius: 5px 20px 20px 5px;
+                    background: linear-gradient(160deg, var(--orange-500), var(--orange-400), var(--orange-400));
+                    border-radius: 2px 20px 20px 2px;
                     padding: 10px 30px;
                 }
             }
