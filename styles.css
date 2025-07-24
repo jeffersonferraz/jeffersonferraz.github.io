@@ -8,7 +8,6 @@
 }
 
 :root {
-    /* defining color variables */
     --white-100: #f5eee6;
     --black-050: #0c0c0c;
     --black-100: #141414;
@@ -39,20 +38,20 @@ body {
     background-blend-mode: multiply;
     margin: auto;
     position: relative;
-    opacity: 0.35;
+    /* opacity: 1; */
     width: 610px;
     height: 210px;
     z-index: -2;
 }
 
 #top {
-    background-image: url(./assets/pixel-top.svg);
-    opacity: 0.48;
+    margin-bottom: -px;
+    background-image: url(./assets/pixels-top.svg);
 }
 
 #bottom {
-    background-image: url(./assets/pixel-bottom.svg);
-
+    margin-top: -1px;
+    background-image: url(./assets/pixels-bottom.svg);
 }
 
 a {
