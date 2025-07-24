@@ -9,6 +9,7 @@
 
 :root {
     --white-100: #f5eee6;
+    --black-020: #060606;
     --black-050: #0c0c0c;
     --black-100: #141414;
     --black-200: #1c1c1c;
@@ -20,12 +21,20 @@
     --blue-100: #458588;
     --blue-400: #346467;
     --yellow-100: #d79921;
+    --yellow-200: #bd871c;
+    --yellow-300: #a67617;
     --cream-100: #ebdbb2;
     --cream-200: #ccbe9a;
     --cream-400: #b2a585;
+    --cream-500: #877c63;
     --opct-white-200: #f5eee633;
     --opct-white-500: #f5eee580;
     --opct-white-700: #f5eee5b3;
+    --opct-cream-020: #ebdbb205;
+    --opct-cream-050: #ebdbb20d;
+    --opct-cream-100: #ebdbb21a;
+    --opct-cream-200: #ebdbb233;
+    --opct-cream-300: #ebdbb24d;
 }
 
 body {
@@ -69,10 +78,11 @@ header {
     height: 56px;
     max-width: 1100px;
     backdrop-filter: blur(3px);
-    background: radial-gradient(at 50% 0%, #ffffff08, #ffffff0d);
+    /* background: radial-gradient(at 50% 0%, #ffffff08, #ffffff0d); */
+    background: radial-gradient(at 50% 0%, var(--opct-cream-020), var(--opct-cream-050));
     /* background: radial-gradient(at 50% 0%, #00000039, #00000056); */
     border-radius: 5px 50px 50px 5px;
-    border: 1px solid var(--opct-white-200);
+    border: 1px solid var(--opct-cream-100);
     position: fixed;
     top: 0;
     left: 0;
@@ -84,10 +94,11 @@ header {
         justify-content: center;
         font-size: 38px;
         color: var(--white-100);
-        background-color: var(--black-050);
+        background-color: var(--black-020);
         height: 68px;
         width: 68px;
         border-radius: 50%;
+        border: 1px solid var(--opct-cream-200);
         font-family: "Silkscreen";
         margin-left: -30px;
         margin-top: -7px;
@@ -128,21 +139,21 @@ header {
 
                 .button-one {
                     background-color: var(--black-050);
-                    color: var(--opct-white-700);
+                    color: var(--cream-200);
                     border-radius: 20px 5px 5px 20px ;
                     /* border: 2px solid var(--black-200); */
                     padding: 10px 30px;
                 }
 
                 .button-two {
-                    color: var(--opct-white-700);
+                    color: var(--cream-200);
                     background: linear-gradient(-50deg, var(--orange-100), var(--black-050), var(--black-050));
                     border-radius: 5px;
                     padding: 10px 30px;
                 }
 
                 .button-three {
-                    color: var(--black-050);
+                    color: var(--black-020);
                     background-color: var(--orange-400);
                     border-radius: 5px 20px 20px 5px;
                     padding: 10px 30px;
@@ -206,13 +217,13 @@ main {
             h1 {
                 text-align: center;
                 font-size: 50px;
-                color: var(--opct-white-700);
+                color: var(--cream-200);
             }
 
             h2 {
                 font-size: 20px;
                 font-weight: 200;
-                color: var(--opct-white-200);
+                color: var(--opct-cream-300);
             }
 
             
@@ -224,12 +235,12 @@ main {
 
             p {
                 background-color: var(--black-100);
-                border-left: 5px solid var(--orange-500);
+                border-left: 5px solid var(--aqua-100);
                 border-radius: 0px 5px 5px 0px;
                 font-family: "IBM PLex Mono", monospace;
                 font-weight: 300;
                 font-size: 14px;
-                color: var(--opct-white-500);
+                color: var(--cream-400);
                 text-align: left;
                 margin: 0px 80px;
                 padding: 20px 20px 40px 25px;
@@ -251,9 +262,10 @@ footer {
         display: flex;
         justify-content: center;
         gap: 30px;
+        padding-bottom: 40px;
 
         .fa-github, .fa-linkedin, .fa-instagram {
-            color: var(--opct-white-700);
+            color: var(--cream-200);
             padding-top: 0px;
             font-size: 26px;
         }
@@ -261,15 +273,16 @@ footer {
     
     p {
         font-family: "IBM Plex Mono";
-        font-size: 10px;
-        font-weight: 200;
-        color: var(--opct-white-500);
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--black-020);
         text-align: center;
-        padding: 60px 0px 10px 0px;
+        padding: 5px 0px;
+        border-top: 3px solid var(--cream-400);
+        background-color: var(--blue-400);
         
         big {
-            font-weight: 500;
-            color: var(--opct-white-700);
+            font-weight: 900;
         }
     }
 }
