@@ -211,6 +211,16 @@ main {
         max-width: 610px;
     }
 
+    .subtitle {
+        font-family: "Silkscreen";
+        font-size: 40px;
+        color: var(--cream-200);
+        text-align: center;
+        margin: 0px 40px;
+        padding: 40px 0px 40px 0px;
+        border-bottom: 3px solid var(--opct-cream-050);
+    }
+
     #about-me {
         background-color: var(--black-050);
 
@@ -238,21 +248,49 @@ main {
         }
 
         .description {
-            border-radius: 5px;
             padding: 60px 0px 40px 0px;
 
             p {
                 background-color: var(--black-100);
                 border-left: 5px solid var(--blue-400);
-                border-radius: 0px 5px 5px 0px;
+                border-radius: 0px 2px 2px 0px;
                 font-family: "IBM PLex Mono", monospace;
                 font-weight: 300;
-                font-size: 14px;
+                font-size: 12px;
                 color: var(--cream-400);
                 text-align: left;
                 margin: 0px 60px;
                 padding: 20px 20px 40px 25px;
                 height: 200px;
+            }
+        }
+    }
+
+    #projects {
+    margin: 10px auto 120px auto;
+    background-color: var(--black-050);
+    border-radius: 3px;
+    /* box-shadow: 0px 0px 10px var(--black-020) inset; */
+
+        .project {
+            display: flex;
+            flex-direction: row;
+            height: 140px;
+            padding: 40px;
+            gap: 40px;
+
+            .project-text {
+
+                h3 {
+                    font-family: "IBM Plex Mono";
+                    color: var(--cream-400);
+                }
+
+                p {
+                    font-family: "IBM Plex Mono";
+                    color: var(--cream-400);
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -265,19 +303,9 @@ main {
         background-color: var(--black-050);
         border-top: 4px solid var(--aqua-400);
         border-bottom: 4px solid var(--aqua-400);
-        border-radius: 3px;
+        border-radius: 2px;
         padding: 0px 20px 40px 20px;
-        box-shadow: 0px 0px 50px var(--black-050);
-        
-        .subtitle {
-            font-family: "Silkscreen";
-            font-size: 40px;
-            color: var(--cream-200);
-            text-align: center;
-            margin: 0px 40px;
-            padding: 40px 0px 40px 0px;
-            border-bottom: 3px solid var(--opct-cream-050);
-        }
+        box-shadow: 0px 0px 30px var(--black-020);
 
         p {
             padding: 40px 0px 15px 0px;
@@ -302,8 +330,8 @@ main {
                 transition: 0.5s;
                 font-family: "IBM PLex Mono", monospace;
                 font-weight: 300;
-                font-size: 14px;
-                padding: 15px;
+                font-size: 12px;
+                padding: 10px;
                 outline: none;
                 border-radius: 2px;
 
@@ -315,7 +343,7 @@ main {
 
             textarea {
                 resize: none;
-                height: 100px;
+                height: 140px;
             }
 
             #submit {
@@ -326,7 +354,6 @@ main {
                 margin-top: 10px;
                 border: none;
                 cursor: pointer;
-                padding: 10px;
 
                 &:hover {
                     background-color: var(--yellow-100);
