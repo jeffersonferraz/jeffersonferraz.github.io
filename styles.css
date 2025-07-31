@@ -9,6 +9,7 @@
 
 :root {
     --white-100: #f5eee6;
+    --black-000: #000000;
     --black-020: #060606;
     --black-050: #0c0c0c;
     --black-100: #141414;
@@ -21,6 +22,10 @@
     --aqua-400: #4d754f;
     --blue-100: #458588;
     --blue-400: #346467;
+    --red-100: #fb4934;
+    --red-200: #e7422f;
+    --red-400: #c03425;
+    --green-100: #98971a;
     --yellow-100: #d79921;
     --yellow-200: #bd871c;
     --yellow-300: #a67617;
@@ -50,19 +55,31 @@ body {
     margin: auto;
     position: relative;
     /* opacity: 1; */
-    width: 610px;
-    height: 212px;
+    width: 625px;
     z-index: -2;
 }
 
 .pixels-top {
     margin-bottom: -2px;
+    height: 212px;
     background-image: url(./assets/pixels-top.svg);
 }
 
 .pixels-bottom {
     margin-top: -2px;
+    height: 212px;
     background-image: url(./assets/pixels-bottom.svg);
+}
+
+.pixels-middle {
+    margin-top: -1px;
+    height: 212px;
+    background-image: url(./assets/pixels-middle.svg);
+}
+
+.pixels-top-small {
+    height: 116px; /* 116px */ 
+    background-image: url(./assets/pixels-top-small.svg);
 }
 
 a {
@@ -208,7 +225,7 @@ main {
 
     .container {
         margin: auto;
-        max-width: 610px;
+        max-width: 625px;
     }
 
     .subtitle {
@@ -248,7 +265,7 @@ main {
         }
 
         .description {
-            padding: 60px 0px 40px 0px;
+            padding: 60px 0px 100px 0px;
 
             p {
                 background-color: var(--black-100);
@@ -267,29 +284,38 @@ main {
     }
 
     #projects {
-    margin: 10px auto 120px auto;
-    background-color: var(--black-050);
-    border-radius: 3px;
-    /* box-shadow: 0px 0px 10px var(--black-020) inset; */
+        margin: -2px auto 2px auto;
+        background-color: var(--black-050);
+        box-shadow: 0px 0px 15px var(--black-050) inset;
+        border-top: 4px solid var(--cream-400);
+        /* border-bottom: 4px solid var(--cream-400); */
+        border: 2px solid var(--black-050);
 
         .project {
+            background-color: var(--black-100);
+            border-radius: 3px;
             display: flex;
             flex-direction: row;
-            height: 140px;
-            padding: 40px;
-            gap: 40px;
+            margin: 40px;
+            gap: 20px;
+
+            img {
+                width: 100px;
+            }
 
             .project-text {
 
                 h3 {
                     font-family: "IBM Plex Mono";
-                    color: var(--cream-400);
+                    color: var(--red-400);
+                    margin: 20px;
                 }
 
                 p {
                     font-family: "IBM Plex Mono";
                     color: var(--cream-400);
                     font-size: 12px;
+                    margin: 20px;
                 }
             }
         }
@@ -305,7 +331,7 @@ main {
         border-bottom: 4px solid var(--aqua-400);
         border-radius: 2px;
         padding: 0px 20px 40px 20px;
-        box-shadow: 0px 0px 30px var(--black-020);
+        box-shadow: 0px 0px 20px var(--black-100);
 
         p {
             padding: 40px 0px 15px 0px;
@@ -365,9 +391,8 @@ main {
 
 footer {
     position: relative;
-    margin: auto;
-    margin-top: 0px;
-    width: 610px;
+    margin: -4px auto 0px auto;
+    width: 625px;
     background-color: var(--black-050);
     bottom: 0;
 
