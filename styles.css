@@ -48,7 +48,7 @@ html {
 }
 
 body {
-    background: linear-gradient(0deg, var(--black-500), var(--black-100));
+    background: linear-gradient(90deg, var(--black-100), var(--black-500), var(--black-500), var(--black-100));
     padding-top: 20px;
 }
 
@@ -66,24 +66,24 @@ body {
 .pixels-top {
     margin-bottom: -2px;
     height: 212px;
-    background-image: url(./assets/pixels-top.svg);
+    background-image: url(./assets/images/pixels-top.svg);
 }
 
 .pixels-bottom {
     margin-top: -2px;
     height: 212px;
-    background-image: url(./assets/pixels-bottom.svg);
+    background-image: url(./assets/images/pixels-bottom.svg);
 }
 
 .pixels-middle {
     margin-top: -1px;
     height: 212px;
-    background-image: url(./assets/pixels-middle.svg);
+    background-image: url(./assets/images/pixels-middle.svg);
 }
 
 .pixels-top-small {
     height: 116px; /* 116px */ 
-    background-image: url(./assets/pixels-top-small.svg);
+    background-image: url(./assets/images/pixels-top-small.svg);
 }
 
 a {
@@ -99,9 +99,7 @@ header {
     height: 56px;
     max-width: 1100px;
     backdrop-filter: blur(3px);
-    /* background: radial-gradient(at 50% 0%, #ffffff08, #ffffff0d); */
     background: radial-gradient(at 50% 0%, var(--opct-cream-020), var(--opct-cream-050));
-    /* background: radial-gradient(at 50% 0%, #00000039, #00000056); */
     border-radius: 5px 50px 50px 5px;
     border: 1px solid var(--opct-cream-100);
     position: fixed;
@@ -237,13 +235,14 @@ main {
         font-size: 40px;
         color: var(--cream-200);
         text-align: center;
-        margin: 0px 40px;
+        margin: 0px 60px;
         padding: 40px 0px 40px 0px;
         border-bottom: 3px solid var(--opct-cream-050);
     }
 
     #about-me-section {
         background-color: var(--black-050);
+        padding-bottom: 60px;
 
         .my-name {
             font-family: "Silkscreen";
@@ -269,19 +268,20 @@ main {
         }
 
         .description {
-            padding: 60px 0px 100px 0px;
+            margin: 60px 60px 0px 60px;
+            padding-bottom: 0px;
+            background-color: var(--black-100);
+            border-left: 5px solid var(--blue-400);
+            border-radius: 0px 2px 2px 0px;
 
             p {
-                background-color: var(--black-100);
-                border-left: 5px solid var(--blue-400);
-                border-radius: 0px 2px 2px 0px;
-                font-family: "IBM PLex Mono", monospace;
+                font-family: "IBM PLex Mono";
                 font-weight: 300;
                 font-size: 12px;
                 color: var(--cream-400);
                 text-align: left;
-                margin: 0px 60px;
-                padding: 20px 20px 40px 25px;
+                line-height: 1.6;
+                padding: 20px 15px 40px 25px;
                 height: 200px;
             }
         }
@@ -291,7 +291,6 @@ main {
         margin: -2px auto 2px auto;
         background-color: var(--black-050);
         box-shadow: 0px 0px 15px var(--black-050) inset;
-        border-top: 4px solid var(--cream-400);
         /* border-bottom: 4px solid var(--cream-400); */
         border: 2px solid var(--black-050);
 
@@ -300,7 +299,7 @@ main {
             border-radius: 3px;
             display: flex;
             flex-direction: row;
-            margin: 40px;
+            margin: 60px;
             gap: 20px;
 
             img {
@@ -319,6 +318,7 @@ main {
                     font-family: "IBM Plex Mono";
                     color: var(--cream-400);
                     font-size: 12px;
+                    line-height: 1.6;
                     margin: 20px;
                 }
             }
@@ -334,12 +334,11 @@ main {
         border-top: 4px solid var(--aqua-400);
         border-bottom: 4px solid var(--aqua-400);
         border-radius: 2px;
-        padding: 0px 20px 40px 20px;
-        box-shadow: 0px 0px 20px var(--black-100);
+        box-shadow: 0px 0px 30px var(--black-020);
 
         p {
-            padding: 40px 0px 15px 0px;
-            margin: 0px 60px;
+            padding: 60px 0px 20px 0px;
+            
             font-size: 12px;
             text-align: center;
             
@@ -352,7 +351,7 @@ main {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            padding: 0px 40px 0px 40px;
+            padding: 0px 60px 0px 60px;
             
             input, textarea {
                 background-color: var(--black-100);
@@ -407,7 +406,7 @@ footer {
         gap: 30px;
         padding-bottom: 40px;
 
-        .fa-github, .fa-linkedin, .fa-instagram {
+        .fa-github, .fa-linkedin {
             color: var(--cream-200);
             padding-top: 0px;
             font-size: 26px;
