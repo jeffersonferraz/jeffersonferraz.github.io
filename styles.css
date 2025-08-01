@@ -121,15 +121,19 @@ header {
         font-family: "Silkscreen";
         margin-left: -30px;
         margin-top: -7px;
+        transition: 0.5s;
 
         #bolt {
             position: absolute;
             height: 54px;
             opacity: 0.8;
+            transition: 0.5s;
         }
 
         &:hover {
-            box-shadow: 0px 3px 5px var(--black-020);
+            /* box-shadow: 0px 0px 15px var(--black-020); */
+            background-color: var(--black-050);
+            border: 1px solid var(--cream-500);
 
             #bolt {
                 opacity: 1;
@@ -155,10 +159,6 @@ header {
                     font-size: 15px;
                     width: 142px;
                     text-align: center;
-
-                    &:hover {
-                        box-shadow: 0px 3px 5px var(--black-020);
-                    }
                 }
 
                 .button-one {
@@ -166,6 +166,10 @@ header {
                     background-color: var(--black-050);
                     border-radius: 20px 2px 2px 20px ;
                     padding: 10px 30px;
+
+                    &:hover {
+                        box-shadow: 0px 3px 5px var(--black-020);
+                    }
                 }
 
                 .button-two {
@@ -338,7 +342,6 @@ main {
 
         p {
             padding: 60px 0px 20px 0px;
-            
             font-size: 12px;
             text-align: center;
             
@@ -368,6 +371,10 @@ main {
                 &:focus {
                     background-color: var(--black-200);
                     border: 2px solid var(--black-200);
+                }
+
+                &::placeholder {
+                    color: var(--cream-400);
                 }
             }
 
@@ -410,6 +417,11 @@ footer {
             color: var(--cream-200);
             padding-top: 0px;
             font-size: 26px;
+            transition: 0.5s;
+
+            &:hover {
+                color: var(--cream-100);
+            }
         }
     }
     
