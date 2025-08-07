@@ -50,7 +50,8 @@ html {
 
 body {
     background: linear-gradient(90deg, var(--black-100), var(--black-500), var(--black-500), var(--black-100));
-    margin-top: 0px;
+    border-top: 30px solid var(--black-050);
+    padding-top: 64px;
 }
 
 .pixels {
@@ -59,7 +60,6 @@ body {
     background-blend-mode: multiply;
     margin: auto;
     position: relative;
-    /* opacity: 1; */
     width: 625px;
     z-index: -2;
 }
@@ -89,7 +89,7 @@ body {
 }
 
 .pixels-top-small {
-    height: 116px; /* 116px */ 
+    height: 116px;
     background-image: url(./assets/images/pixels-top-small.svg);
 }
 
@@ -101,7 +101,7 @@ header {
     padding-right: 10px;
     display: flex;
     justify-content: space-between;
-    margin: 35px auto;
+    margin: 30px auto -5px auto;
     width: 70%;
     height: 60px;
     max-width: 1100px;
@@ -127,7 +127,7 @@ header {
         border: 2px solid var(--cream-500);
         font-family: "Silkscreen";
         margin-left: -30px;
-        margin-top: -14px;
+        margin-top: -12px;
         transition: 0.5s;
 
         #bolt {
@@ -138,7 +138,7 @@ header {
         }
 
         &:hover {
-            /* box-shadow: 0px 0px 15px var(--black-020); */
+            box-shadow: 0px 0px 15px var(--black-000);
             background-color: var(--black-050);
             border: 2px solid var(--cream-200);
 
@@ -171,9 +171,6 @@ header {
                 .button-one {
                     color: var(--cream-100);
                     background-color: var(--black-050);
-                    /* border-top: 2px solid var(--opct-cream-300);
-                    border-left: 2px solid var(--opct-cream-300);
-                    border-bottom: 2px solid var(--opct-cream-300); */
                     border-radius: 20px 2px 2px 20px ;
                     padding: 10px 30px;
                     transition: 0.2s;
@@ -187,8 +184,6 @@ header {
                 .button-two {
                     color: var(--cream-100);
                     background: linear-gradient(-50deg, var(--orange-400), var(--black-050), var(--black-050));
-                    /* border-top: 2px solid var(--opct-cream-300);
-                    border-bottom: 2px solid var(--opct-cream-300); */
                     border-radius: 2px;
                     padding: 10px 30px;
                     transition: 0.2s;
@@ -203,9 +198,6 @@ header {
                 .button-three {
                     color: var(--black-000);
                     background: linear-gradient(160deg, var(--orange-500), var(--orange-400), var(--orange-100));
-                    /* border-top: 2px solid var(--opct-cream-300);
-                    border-right: 2px solid var(--opct-cream-300);
-                    border-bottom: 2px solid var(--opct-cream-300); */
                     border-radius: 2px 20px 20px 2px;
                     padding: 10px 30px;
                     transition: 0.2s;
@@ -451,6 +443,7 @@ footer {
 
             &:hover {
                 color: var(--cream-100);
+                text-shadow: 0px 0px 4px var(--cream-600);
             }
         }
     }
