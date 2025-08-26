@@ -44,6 +44,15 @@
     --opct-cream-300: #ebdbb24d;
 }
 
+/* ::-webkit-scrollbar {
+    width: 5px;
+    background: var(--black-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cream-600);
+} */
+
 html {
     scroll-behavior: smooth;
 }
@@ -60,7 +69,7 @@ body {
     background-blend-mode: multiply;
     margin: auto;
     position: relative;
-    width: 625px;
+    max-width: 830px;
     z-index: -2;
 }
 
@@ -102,12 +111,11 @@ header {
     display: flex;
     justify-content: space-between;
     margin: 30px auto -5px auto;
-    width: 70%;
     height: 60px;
-    max-width: 1100px;
+    max-width: 855px;
     backdrop-filter: blur(3px);
-    background: radial-gradient(at 50% 0%, var(--opct-cream-020), var(--opct-cream-050));
-    border-radius: 5px 50px 50px 5px;
+    background: radial-gradient(at 50% 0%, var(--opct-cream-050), var(--opct-cream-100));
+    border-radius: 50px;
     border: 1px solid var(--opct-cream-100);
     position: fixed;
     top: 0;
@@ -118,14 +126,11 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 38px;
-        color: var(--white-100);
         background-color: var(--black-020);
         height: 80px;
         width: 80px;
         border-radius: 50%;
-        border: 2px solid var(--cream-500);
-        font-family: "Silkscreen";
+        border: 2px solid var(--cream-400);
         margin-left: -30px;
         margin-top: -12px;
         transition: 0.5s;
@@ -135,6 +140,10 @@ header {
             height: 68px;
             opacity: 0.8;
             transition: 0.5s;
+
+            @media (max-width: 970px) {
+                height: 50px;
+            }
         }
 
         &:hover {
@@ -145,6 +154,22 @@ header {
             #bolt {
                 opacity: 1;
             }
+
+            @media (max-width: 970px) {
+                border: 1px solid var(--cream-100);
+            }
+        }
+
+        @media (max-width: 970px) {
+            margin-left: -1px;
+            margin-top: -3px;
+            height: 64px;
+            width: 64px;
+            border: 1px solid var(--cream-400);
+        }
+
+        @media (max-width: 576px) {
+            display: none;
         }
     }
 
@@ -164,7 +189,7 @@ header {
                     display: inline-block;
                     font-family: "Silkscreen";
                     font-size: 15px;
-                    width: 142px;
+                    
                     text-align: center;
                 }
 
@@ -173,11 +198,17 @@ header {
                     background-color: var(--black-050);
                     border-radius: 20px 2px 2px 20px ;
                     padding: 10px 30px;
+                    width: 100%;
+                    /* box-shadow: 0px -1px 0px var(--cream-400); */
                     transition: 0.2s;
 
                     &:hover {
-                        box-shadow: -3px 4px 0px var(--cream-400);
+                        box-shadow: 0px 4px 0px var(--cream-400);
                         margin-top: -3px;
+                    }
+
+                    @media (max-width: 576px) {
+                        width: 100%;
                     }
                 }
 
@@ -186,12 +217,16 @@ header {
                     background: linear-gradient(-50deg, var(--orange-400), var(--black-050), var(--black-050));
                     border-radius: 2px;
                     padding: 10px 30px;
+                    /* box-shadow: 0px -1px 0px var(--cream-400); */
                     transition: 0.2s;
 
                     &:hover {
                         box-shadow: 0px 4px 0px var(--cream-400);
                         margin-top: -3px;
-                        
+                    }
+
+                    @media (max-width: 576px) {
+                        width: 100%;
                     }
                 }
 
@@ -200,52 +235,42 @@ header {
                     background: linear-gradient(160deg, var(--orange-500), var(--orange-400), var(--orange-100));
                     border-radius: 2px 20px 20px 2px;
                     padding: 10px 30px;
+                    /* box-shadow: 0px -1px 0px var(--cream-400); */
                     transition: 0.2s;
 
                     &:hover {
-                        box-shadow: 3px 4px 0px var(--cream-400);
+                        box-shadow: 0px 4px 0px var(--cream-400);
                         margin-top: -3px;
                     }
+
+                    @media (max-width: 576px) {
+                        width: 100%;
+                    }
                 }
+
+                @media (max-width: 576px) {
+                    width: 33%;
+                }
+            }
+
+            @media (max-width: 576px) {
+                width: 100%;
             }
         }
 
-        /* .mobile-toggle {
-            display: none;
-            color: var(--black-200);
-            padding: 10px;
-
-            @media (max-width: 790px) {
-                display: inline-block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-            }
-        } */
+        @media (max-width: 576px) {
+            width: 100%;
+        }
     }
 
-    /* @media (max-width: 790px) {
-        flex-direction: column;
+    @media (max-width: 970px) {
+        width: 90%;
+    }
 
-        nav {
-            width: 100%;
-
-            ul {
-                display: none;
-                width: 100%;
-
-                a {
-                    width: 100%;
-                }
-
-                &.active {
-                    display: flex;
-                    margin-top: 10px;
-                    justify-content: center
-                }
-            }
-        }
-    } */
+    @media (max-width: 576px) {
+        justify-content: center;
+        padding: 10px;
+    }
 }
 
 main {
@@ -253,16 +278,16 @@ main {
 
     .container {
         margin: auto;
-        max-width: 625px;
+        max-width: 830px;
     }
 
     .subtitle {
         font-family: "Silkscreen";
-        font-size: 40px;
+        font-size: 50px;
         color: var(--cream-200);
         text-align: center;
         margin: 0px 60px;
-        padding: 40px 0px 40px 0px;
+        padding: 40px 0px 60px 0px;
         border-bottom: 3px solid var(--opct-cream-050);
     }
 
@@ -274,13 +299,21 @@ main {
             font-family: "Silkscreen";
             text-align: center;
             margin: 0px 60px;
+            padding: 40px 0px 60px 0px;
+            border-bottom: 3px solid var(--opct-cream-050);
 
             h1 {
                 text-align: center;
-                font-size: 52px;
-                color: var(--cream-200);
-                padding-bottom: 20px;
-                border-bottom: 3px solid var(--opct-cream-050);
+                font-size: 62px;
+                color: var(--cream-100);
+
+                @media (max-width: 620px) {
+                    font-size: 56px;
+                }
+
+                @media (max-width: 560px) {
+                    font-size: 48px;
+                }
             }
 
             h2 {
@@ -289,7 +322,18 @@ main {
                 color: var(--cream-500);
                 padding-top: 10px;
                 margin-bottom: -20px;
-                /* border-top: 3px dashed var(--opct-cream-050); */
+            }
+
+            h3 {
+                font-size: 20px;
+                font-weight: 200;
+                margin-top: -6px;
+                color: var(--cream-500);
+            }
+
+            strong {
+                font-size: 22px;
+                color: var(--cream-400);
             }
         }
 
@@ -317,7 +361,6 @@ main {
         margin: -2px auto 2px auto;
         background-color: var(--black-050);
         box-shadow: 0px 0px 15px var(--black-050) inset;
-        /* border-bottom: 4px solid var(--cream-400); */
         border: 2px solid var(--black-050);
 
         .project {
@@ -361,6 +404,7 @@ main {
         border-bottom: 4px solid var(--aqua-400);
         border-radius: 2px;
         box-shadow: 0px 0px 30px var(--black-020);
+        padding-top: 20px;
 
         p {
             padding: 60px 0px 20px 0px;
@@ -425,7 +469,7 @@ main {
 footer {
     position: relative;
     margin: -4px auto 0px auto;
-    width: 625px;
+    max-width: 830px;
     background-color: var(--black-050);
     bottom: 0;
 
@@ -433,17 +477,17 @@ footer {
         display: flex;
         justify-content: center;
         gap: 30px;
-        padding-bottom: 40px;
+        padding: 60px 0px 80px 0px;
 
         .fa-github, .fa-linkedin {
-            color: var(--cream-200);
+            color: var(--cream-400);
             padding-top: 0px;
-            font-size: 26px;
+            font-size: 34px;
             transition: 0.5s;
 
             &:hover {
                 color: var(--cream-100);
-                text-shadow: 0px 0px 4px var(--cream-600);
+                text-shadow: 0px 0px 22px var(--black-200);
             }
         }
     }
