@@ -185,13 +185,18 @@ header {
                     font-family: "Silkscreen";
                     font-size: 15px;
                     text-align: center;
+                    padding: 10px 30px;
+
+                    @media (max-width: 510px) {
+                        padding: 10px 0px;
+                    }
                 }
 
                 .button-one {
                     color: var(--cream-100);
                     background-color: var(--black-050);
                     border-radius: 20px 2px 2px 20px ;
-                    padding: 10px 30px;
+                    
                     width: 100%;
                     transition: 0.2s;
 
@@ -209,7 +214,6 @@ header {
                     color: var(--cream-100);
                     background: linear-gradient(-50deg, var(--orange-400), var(--black-050), var(--black-050));
                     border-radius: 2px;
-                    padding: 10px 30px;
                     transition: 0.2s;
 
                     &:hover {
@@ -226,7 +230,6 @@ header {
                     color: var(--black-000);
                     background: linear-gradient(160deg, var(--orange-500), var(--orange-400), var(--orange-100));
                     border-radius: 2px 20px 20px 2px;
-                    padding: 10px 30px;
                     transition: 0.2s;
 
                     &:hover {
@@ -280,6 +283,15 @@ main {
         margin: 0px 60px;
         padding: 40px 0px 60px 0px;
         border-bottom: 3px solid var(--opct-cream-050);
+
+        @media (max-width: 490px) {
+            font-size: 44px;
+        }
+
+        @media (max-width: 430px) {
+            font-size: 34px;
+        }
+        
     }
 
     #about-me-section {
