@@ -86,7 +86,7 @@ body {
 }
 
 .pixels-middle-top {
-    margin-top: -1px;
+    margin-top: -2px;
     height: 106px;
     background-image: url(./assets/images/pixels-middle-top.svg);
 }
