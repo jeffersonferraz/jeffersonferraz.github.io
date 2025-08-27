@@ -44,14 +44,14 @@
     --opct-cream-300: #ebdbb24d;
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 5px;
     background: var(--black-100);
 }
 
 ::-webkit-scrollbar-thumb {
     background: var(--cream-600);
-} */
+}
 
 html {
     scroll-behavior: smooth;
@@ -280,7 +280,6 @@ main {
         font-size: 50px;
         color: var(--cream-200);
         text-align: center;
-        margin: 0px 60px;
         padding: 40px 0px 60px 0px;
         border-bottom: 3px solid var(--opct-cream-050);
 
@@ -301,7 +300,6 @@ main {
         .my-name {
             font-family: "Silkscreen";
             text-align: center;
-            margin: 0px 60px;
             padding: 40px 0px 60px 0px;
             border-bottom: 3px solid var(--opct-cream-050);
 
@@ -319,23 +317,23 @@ main {
                 color: var(--cream-100);
 
                 @media (max-width: 620px) {
-                    font-size: 56px;
+                    font-size: 62px;
                 }
 
                 @media (max-width: 560px) {
-                    font-size: 48px;
+                    font-size: 56px;
                 }
 
                 @media (max-width: 500px) {
-                    font-size: 44px;
+                    font-size: 50px;
                 }
 
                 @media (max-width: 470px) {
-                    font-size: 40px;
+                    font-size: 46px;
                 }
 
                 @media (max-width: 440px) {
-                    font-size: 32px;
+                    font-size: 42px;
                 }
             }
 
@@ -378,8 +376,8 @@ main {
         }
 
         .description {
-            margin: 60px 60px 0px 60px;
-            padding-bottom: 0px;
+            width: 85%;
+            margin: 60px auto 20px auto;
             background-color: var(--black-100);
             border-left: 5px solid var(--blue-400);
             border-radius: 0px 2px 2px 0px;
@@ -400,19 +398,19 @@ main {
     #projects-section {
         margin: -2px auto 2px auto;
         background-color: var(--black-050);
-        box-shadow: 0px 0px 15px var(--black-050) inset;
-        border: 2px solid var(--black-050);
+        padding-bottom: 20px;
 
         .project {
             background-color: var(--black-100);
             border-radius: 3px;
             display: flex;
+            margin: 60px auto;
             flex-direction: row;
-            margin: 60px;
+            width: 85%;
             gap: 20px;
 
             img {
-                width: 100px;
+                width: 10%;
             }
 
             .project-text {
@@ -444,10 +442,10 @@ main {
         border-bottom: 4px solid var(--aqua-400);
         border-radius: 2px;
         box-shadow: 0px 0px 30px var(--black-020);
-        padding-top: 20px;
+        padding-bottom: 40px;
 
         p {
-            padding: 60px 0px 20px 0px;
+            padding: 60px 30px 20px 30px;
             font-size: 12px;
             text-align: center;
             
@@ -460,7 +458,8 @@ main {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            padding: 0px 60px 0px 60px;
+            width: 85%;
+            margin: auto;
             
             input, textarea {
                 background-color: var(--black-100);
