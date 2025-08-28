@@ -85,10 +85,10 @@ body {
     background-image: url(./assets/images/pixels-bottom-s.svg);
 }
 
-.pixels-middle-top {
+/* .pixels-middle-top {
     margin-top: -2px;
-    height: 106px;
-    background-image: url(./assets/images/pixels-middle-top.svg);
+    height: 212px;
+    background-image: url(./assets/images/pixels-bottom.svg);
 }
 
 .pixels-middle-bottom {
@@ -100,7 +100,7 @@ body {
 .pixels-top-small {
     height: 116px;
     background-image: url(./assets/images/pixels-top-small.svg);
-}
+} */
 
 a {
     text-decoration: none;
@@ -278,10 +278,11 @@ main {
     .subtitle {
         font-family: "Silkscreen";
         font-size: 50px;
+        background-color: var(--black-020);
         color: var(--cream-200);
         text-align: center;
-        padding: 40px 0px 60px 0px;
-        border-bottom: 3px solid var(--opct-cream-050);
+        padding: 60px 0px 60px 0px;
+        border-bottom: 4px solid var(--opct-cream-050);
 
         @media (max-width: 490px) {
             font-size: 44px;
@@ -298,10 +299,12 @@ main {
         padding-bottom: 60px;
 
         .my-name {
+            background-color: var(--black-020);
             font-family: "Silkscreen";
             text-align: center;
             padding: 40px 0px 60px 0px;
-            border-bottom: 3px solid var(--opct-cream-050);
+            border-bottom: 4px solid var(--opct-cream-050);
+            border-top: 4px solid var(--opct-cream-050);
 
             @media (max-width: 970px) {
                 padding: 20px 0px 60px 0px;
@@ -396,9 +399,11 @@ main {
     }
 
     #projects-section {
-        margin: -2px auto 2px auto;
+        margin: 40px auto 2px auto;
         background-color: var(--black-050);
         padding-bottom: 20px;
+        border-top: 4px solid var(--black-020);
+        border-radius: 3px 3px 0px 0px;
 
         .project {
             background-color: var(--black-100);
@@ -438,11 +443,13 @@ main {
         font-weight: 300;
         font-size: 14px;
         background-color: var(--black-050);
-        border-top: 4px solid var(--aqua-400);
-        border-bottom: 4px solid var(--aqua-400);
+        border-top: 5px solid var(--aqua-400);
+        border-bottom: 5px solid var(--aqua-400);
         border-radius: 2px;
         box-shadow: 0px 0px 30px var(--black-020);
         padding-bottom: 40px;
+        margin-top: 40px;
+        margin-bottom: 40px;
 
         p {
             padding: 60px 30px 20px 30px;
