@@ -299,12 +299,13 @@ main {
         padding-bottom: 60px;
 
         .my-name {
-            background-color: var(--black-020);
+            background-color: var(--black-050);
             font-family: "Silkscreen";
             text-align: center;
             padding: 40px 0px 60px 0px;
             border-bottom: 4px solid var(--opct-cream-050);
-            border-top: 4px solid var(--opct-cream-050);
+            width: 85%;
+            margin: auto;
 
             h1 {
                 text-align: center;
@@ -372,7 +373,7 @@ main {
             margin: 60px auto 20px auto;
             background-color: var(--black-100);
             border-left: 5px solid var(--blue-400);
-            border-radius: 0px 2px 2px 0px;
+            border-radius: 0px 3px 3px 0px;
 
             p {
                 font-family: "IBM PLex Mono";
