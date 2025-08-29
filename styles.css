@@ -354,14 +354,14 @@ main {
             background-color: var(--black-100);
             border-left: 5px solid var(--blue-400);
             border-radius: 0px 3px 3px 0px;
-            padding: 20px 15px 20px 25px;
+            padding: 20px 25px 20px 25px;
 
             p {
                 font-family: "IBM PLex Mono";
                 font-weight: 300;
                 font-size: 13px;
                 color: var(--cream-400);
-                text-align: left;
+                text-align: justify;
                 line-height: 1.8;
                 padding: 10px 0px;
 
