@@ -1,7 +1,6 @@
 *,
 *::before,
 *::after {
-    /* Base-config */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -84,23 +83,6 @@ body {
     height: 157px;
     background-image: url(./assets/images/pixels-bottom-s.svg);
 }
-
-/* .pixels-middle-top {
-    margin-top: -2px;
-    height: 212px;
-    background-image: url(./assets/images/pixels-bottom.svg);
-}
-
-.pixels-middle-bottom {
-    margin-top: -2px;
-    height: 106px;
-    background-image: url(./assets/images/pixels-middle-bottom.svg);
-}
-
-.pixels-top-small {
-    height: 116px;
-    background-image: url(./assets/images/pixels-top-small.svg);
-} */
 
 a {
     text-decoration: none;
@@ -196,7 +178,6 @@ header {
                     color: var(--cream-100);
                     background-color: var(--black-050);
                     border-radius: 20px 2px 2px 20px ;
-                    
                     width: 100%;
                     transition: 0.2s;
 
@@ -268,7 +249,7 @@ header {
 }
 
 main {
-    margin-bottom: 0;
+    margin-bottom: 0px;
 
     .container {
         margin: auto;
@@ -291,7 +272,6 @@ main {
         @media (max-width: 430px) {
             font-size: 34px;
         }
-        
     }
 
     #about-me-section {
@@ -374,16 +354,28 @@ main {
             background-color: var(--black-100);
             border-left: 5px solid var(--blue-400);
             border-radius: 0px 3px 3px 0px;
+            padding: 20px 15px 20px 25px;
 
             p {
                 font-family: "IBM PLex Mono";
                 font-weight: 300;
-                font-size: 12px;
+                font-size: 13px;
                 color: var(--cream-400);
                 text-align: left;
-                line-height: 1.6;
-                padding: 20px 15px 40px 25px;
-                height: 200px;
+                line-height: 1.8;
+                padding: 10px 0px;
+
+                strong {
+                    font-weight: 600;
+                }
+
+                .yellow {
+                    color: var(--yellow-200);
+                }
+
+                .red {
+                    color: var(--red-400);
+                }
             }
         }
     }
