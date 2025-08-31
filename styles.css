@@ -352,7 +352,7 @@ main {
             width: 85%;
             margin: 60px auto 20px auto;
             background-color: var(--black-100);
-            border-left: 5px solid var(--blue-400);
+            border-left: 6px solid var(--blue-400);
             border-radius: 0px 3px 3px 0px;
             padding: 20px 25px 20px 25px;
 
@@ -415,6 +415,37 @@ main {
                     line-height: 1.6;
                     margin: 20px;
                 }
+
+                .techs {
+                    text-align: center;
+                }
+
+                a {
+                    font-family: "IBM Plex Mono";
+                    color: var(--blue-400);
+                    
+                    font-size: 12px;
+                    font-weight: 600;
+                    margin: 20px;
+                    padding: 5px;
+                    border: 1px solid var(--opct-cream-050);
+                    border-radius: 3px;
+                    transition: 0.5s;
+
+
+                    &:hover {
+                        color: var(--blue-100);
+                        background-color: var(--opct-cream-020);
+                        border: 1px solid var(--opct-cream-100);
+                    }
+                }
+
+                .fa-brands {
+                    color: var(--cream-400);
+                    margin: 10px 5px 20px 5px;
+                    font-size: 24px;
+                    transition: 0.2s;
+                }
             }
         }
     }
@@ -460,7 +491,7 @@ main {
                 font-size: 12px;
                 padding: 10px;
                 outline: none;
-                border-radius: 2px;
+                border-radius: 3px;
 
                 &:focus {
                     background-color: var(--black-200);
@@ -481,7 +512,7 @@ main {
                 background-color: var(--yellow-300);
                 color: var(--black-020);
                 font-family: "Silkscreen";
-                font-size: 20px;
+                font-size: 22px;
                 margin-top: 10px;
                 border: none;
                 cursor: pointer;
@@ -507,7 +538,7 @@ footer {
         gap: 30px;
         padding: 60px 0px 80px 0px;
 
-        .fa-github, .fa-linkedin {
+        .fa-brands {
             color: var(--cream-400);
             padding-top: 0px;
             font-size: 34px;
