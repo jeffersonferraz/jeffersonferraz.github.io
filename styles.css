@@ -36,7 +36,19 @@
     --opct-white-200: #f5eee633;
     --opct-white-500: #f5eee580;
     --opct-white-700: #f5eee5b3;
+    --opct-orange-100: #fe80191a;
+    --opct-orange-200: #fe801933;
+    --opct-orange-300: #fe80194d;
     --opct-aqua-300: #689d6a4d;
+    --opct-red-100: #fb49341a;
+    --opct-red-200: #fb493433;
+    --opct-red-300: #fb49344d;
+    --opct-green-100: #98971a1a;
+    --opct-green-200: #98971a33;
+    --opct-green-300: #98971a4d;
+    --opct-yellow-100: #d799211a;
+    --opct-yellow-200: #d7992133;
+    --opct-yellow-300: #d799214d;
     --opct-cream-020: #ebdbb205;
     --opct-cream-050: #ebdbb20d;
     --opct-cream-100: #ebdbb21a;
@@ -104,6 +116,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 99;
 
     .logo {
         display: flex;
@@ -264,7 +277,7 @@ main {
         color: var(--cream-200);
         text-align: center;
         padding: 60px 0px 60px 0px;
-        border-bottom: 4px solid var(--opct-cream-050);
+        border-bottom: 4px solid var(--opct-cream-100);
 
         @media (max-width: 490px) {
             font-size: 44px;
@@ -392,20 +405,65 @@ main {
             background-color: var(--black-100);
             border-radius: 3px;
             display: flex;
-            margin: 60px auto;
-            flex-direction: row;
+            margin: 40px auto;
+            flex-direction: column;
             width: 85%;
-            gap: 20px;
 
-            img {
-                width: 10%;
+            .project-title {
+                display: flex;
+                background-color: var(--black-200);
+                font-family: "IBM Plex Mono";
+                align-items: center;
+                border-bottom: 2px solid var(--opct-cream-050);
+                border-radius: 3px 3px 0px 0px;
+
+                h3 {
+                    font-size: 20px;
+                    color: var(--red-400);
+                    margin: 25px;
+                }
+
+                p {
+                    font-size: 11px;
+                    font-weight: 400;
+                    padding: 2px 5px;
+                    border-radius: 50px;
+                }
+
+                .yellow {
+                    color: var(--yellow-200);
+                    background-color: var(--opct-yellow-100);
+                    border: 1px solid var(--opct-yellow-300);
+                }
+
+                .green {
+                    color: var(--green-100);
+                    background-color: var(--opct-green-100);
+                    border: 1px solid var(--opct-green-300);
+                }
             }
 
             .project-text {
-                h3 {
-                    font-family: "IBM Plex Mono";
-                    color: var(--red-400);
-                    margin: 25px;
+                padding-top: 25px;
+                
+                .app-image {
+                    display: flex;
+                    float: left;
+                    margin: 0px 25px 20px 25px;
+                    max-width: 230px;
+                    border-radius: 3px;
+                    opacity: 0.7;
+                }
+
+                .website-image {
+                    display: flex;
+                    float: left;
+                    background-color: var(--black-200);
+                    margin: 0px 25px 20px 25px;
+                    padding: 10px;
+                    max-width: 120px;
+                    border-radius: 3px;
+                    opacity: 0.7;
                 }
 
                 p {
@@ -414,7 +472,32 @@ main {
                     color: var(--cream-400);
                     font-size: 12px;
                     line-height: 1.6;
-                    margin: 25px;
+                    margin: 0px 25px;
+                }
+
+                .techs {
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: center;
+                    margin: 30px 0px;
+                    gap: 15px;
+
+                    .tech-item {
+                        display: flex;
+                        flex-flow: column;
+                        align-items: center;
+                        gap: 2px;
+
+                        .fa-brands, .fa-solid {
+                            color: var(--cream-400);
+                            font-size: 24px;
+                        }
+
+                        p {
+                            font-size: 10px;
+                            margin: 0px;
+                        }
+                    }
                 }
 
                 .link-button {
@@ -423,31 +506,35 @@ main {
 
                     a {
                         font-family: "IBM Plex Mono";
-                        color: var(--blue-400);
                         font-size: 12px;
                         font-weight: 600;
                         padding: 5px;
                         border: 1px solid var(--opct-cream-050);
                         border-radius: 3px;
                         transition: 0.2s;
+                        margin-left: 5px;
 
                         &:hover {
-                            color: var(--blue-100);
                             background-color: var(--opct-cream-020);
                             border: 1px solid var(--opct-cream-100);
                         }
                     }
-                }
 
-                .techs {
-                    text-align: center;
-                }
+                    .repository {
+                        color: var(--blue-400);
 
-                .fa-brands {
-                    color: var(--cream-400);
-                    margin: 0px 5px 25px 5px;
-                    font-size: 24px;
-                    transition: 0.2s;
+                        &:hover {
+                            color: var(--blue-100);
+                        }
+                    }
+
+                    .website {
+                        color: var(--aqua-400);
+
+                        &:hover {
+                            color: var(--aqua-100);
+                        }
+                    }
                 }
             }
         }
