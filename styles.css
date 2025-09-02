@@ -19,6 +19,7 @@
     --orange-500: #7a3c09;
     --aqua-100: #689d6a;
     --aqua-400: #4d754f;
+    --purple-100: #b16286;
     --blue-100: #458588;
     --blue-400: #346467;
     --red-100: #fb4934;
@@ -40,6 +41,9 @@
     --opct-orange-200: #fe801933;
     --opct-orange-300: #fe80194d;
     --opct-aqua-300: #689d6a4d;
+    --opct-purple-100: #b162861a;
+    --opct-purple-200: #b1628633;
+    --opct-purple-300: #b162864d;
     --opct-red-100: #fb49341a;
     --opct-red-200: #fb493433;
     --opct-red-300: #fb49344d;
@@ -430,10 +434,10 @@ main {
                     border-radius: 50px;
                 }
 
-                .yellow {
-                    color: var(--yellow-200);
-                    background-color: var(--opct-yellow-100);
-                    border: 1px solid var(--opct-yellow-300);
+                .purple {
+                    color: var(--purple-100);
+                    background-color: var(--opct-purple-100);
+                    border: 1px solid var(--opct-purple-300);
                 }
 
                 .green {
@@ -450,20 +454,32 @@ main {
                     display: flex;
                     float: left;
                     margin: 5px 25px 15px 25px;
-                    max-width: 230px;
+                    max-width: 250px;
                     border-radius: 3px;
                     opacity: 0.6;
+
+                    @media (max-width: 580px) {
+                        float: none;
+                        margin: 0px auto 25px auto;
+                        max-width: 270px;
+                    }
                 }
 
                 .website-image {
                     display: flex;
                     float: left;
                     background-color: var(--black-200);
-                    margin: 0px 25px 20px 25px;
+                    margin: 0px 25px 15px 25px;
                     padding: 10px;
                     max-width: 120px;
                     border-radius: 3px;
                     opacity: 0.7;
+
+                    @media (max-width: 460px) {
+                        float: none;
+                        margin: 0px auto 25px auto;
+                        max-width: 150px;
+                    }
                 }
 
                 p {
@@ -471,15 +487,15 @@ main {
                     font-family: "IBM Plex Mono";
                     color: var(--cream-400);
                     font-size: 12px;
-                    line-height: 1.6;
-                    margin: 0px 25px;
+                    line-height: 1.5;
+                    margin: 0px 25px 15px 25px;
                 }
 
                 .techs {
                     display: flex;
                     flex-flow: row;
                     justify-content: center;
-                    margin: 30px 0px;
+                    margin: 10px 0px 30px 0px;
                     gap: 15px;
 
                     .tech-item {
@@ -490,25 +506,27 @@ main {
 
                         .fa-brands, .fa-solid {
                             color: var(--cream-400);
-                            font-size: 24px;
+                            font-size: 28px;
                         }
 
                         p {
                             font-size: 10px;
                             margin: 0px;
+                            color: var(--cream-600);
                         }
                     }
                 }
 
                 .link-button {
+                    border-top: 2px solid var(--opct-cream-020);
                     text-align: right;
-                    margin: 0px 25px 30px 0px;
+                    padding: 15px 25px;
 
                     a {
                         font-family: "IBM Plex Mono";
                         font-size: 12px;
                         font-weight: 600;
-                        padding: 5px;
+                        padding: 2px 4px;
                         border: 1px solid var(--opct-cream-050);
                         border-radius: 3px;
                         transition: 0.2s;
