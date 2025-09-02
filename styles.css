@@ -469,16 +469,14 @@ main {
                     display: flex;
                     float: left;
                     background-color: var(--black-200);
-                    margin: 0px 25px 15px 25px;
+                    margin: 5px 25px 10px 25px;
                     padding: 10px;
                     max-width: 120px;
                     border-radius: 3px;
                     opacity: 0.7;
 
-                    @media (max-width: 460px) {
-                        float: none;
-                        margin: 0px auto 25px auto;
-                        max-width: 150px;
+                    @media (max-width: 450px) {
+                        max-width: 90px;
                     }
                 }
 
