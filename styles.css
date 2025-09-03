@@ -521,6 +521,7 @@ main {
                     padding: 15px 25px;
 
                     a {
+                        background-color: var(--opct-cream-020);
                         font-family: "IBM Plex Mono";
                         font-size: 12px;
                         font-weight: 600;
@@ -531,7 +532,7 @@ main {
                         margin-left: 5px;
 
                         &:hover {
-                            background-color: var(--opct-cream-020);
+                            background-color: var(--opct-cream-050);
                             border: 1px solid var(--opct-cream-100);
                         }
                     }
