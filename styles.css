@@ -13,6 +13,8 @@
     --black-050: #0c0c0c;
     --black-100: #141414;
     --black-200: #1c1c1c;
+    --black-300: #202020;
+    --black-400: #242424;
     --black-500: #282828;
     --orange-100: #fe8019;
     --orange-400: #bf5f10;
@@ -468,7 +470,7 @@ main {
                 .website-image {
                     display: flex;
                     float: left;
-                    background-color: var(--black-200);
+                    background-color: var(--black-300);
                     margin: 5px 25px 10px 25px;
                     padding: 10px;
                     max-width: 120px;
@@ -493,7 +495,7 @@ main {
                     display: flex;
                     flex-flow: row;
                     justify-content: center;
-                    margin: 10px 0px 30px 0px;
+                    margin: 10px 0px 25px 0px;
                     gap: 15px;
 
                     .tech-item {
