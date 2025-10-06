@@ -25,19 +25,19 @@
         <nav>
             <ul id="menu">
                 <li>
-                    <a href="#about-me" class="button-one">about_me</a>
+                    <a href="#about-me-section" class="button-one scroll">about_me</a>
                 </li>
                 <li>
-                    <a href="#projects" class="button-two">projects</a>
+                    <a href="#projects-section" class="button-two scroll">projects</a>
                 </li>
                 <li>
-                    <a href="#contact" class="button-three">contact</a>
+                    <a href="#contact-section" class="button-three scroll">contact</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="pixels pixels-top" id="about-me"></div>
+        <div class="pixels pixels-top"></div>
 
         <section id="about-me-section" class="container">
             <div class="my-name">
@@ -58,7 +58,7 @@
             </div>
         </section>
 
-        <div class="pixels pixels-bottom" id="projects"></div>
+        <div class="pixels pixels-bottom"></div>
 
         <section id="projects-section" class="container">
             <h2 class="subtitle">projects</h2>
@@ -314,7 +314,7 @@
             </span>
         </section>
 
-        <div class="pixels pixels-bottom" id="contact"></div>
+        <div class="pixels pixels-bottom"></div>
 
         <section id="contact-section" class="container">
             <h2 class="subtitle">contact</h2>
@@ -340,5 +340,39 @@
         </span>
         <p>created by <big>Jefferson</big></p>
     </footer>
+    <script>
+        // select all elements (buttons) of class 'scroll'
+        // 'forEach' checks all selected elements and set up a 'click'-Listener to them
+        document.querySelectorAll('.scroll').forEach(button => {
+            button.addEventListener('click', function(event) {
+
+                // by clicking a button the following code will be run
+                event.preventDefault(); // avoid the default behaviour of the link, so it won't jump to the section but scroll smoothier
+
+                const sectionId = this.getAttribute('href'); // read the 'href' attribute
+                const sectionElement = document.querySelector(sectionId); // select the target section 
+                const offset = 120; // define a distance from the top
+
+                // 'getBoundingClientRect().top' reads the relative position of the visible area
+                
+                // 'bodyRect' is the distance of the '<body>' element from the top in the current viewport
+                const bodyRect = document.body.getBoundingClientRect().top; 
+
+                // 'sectionRect' is the distance of the target section from the top in the current viewport
+                const sectionRect = sectionElement.getBoundingClientRect().top;
+                const position = sectionRect - bodyRect - offset;
+
+                // console.log(bodyRect);
+                // console.log(sectionRect);
+                // console.log(position);
+
+                // execute the smooth scrolling
+                window.scrollTo({
+                    top: position,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

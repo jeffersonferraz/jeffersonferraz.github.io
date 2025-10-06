@@ -71,14 +71,10 @@
     background: var(--cream-600);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background: linear-gradient(90deg, var(--black-100), var(--black-500), var(--black-500), var(--black-100));
     border-top: 30px solid var(--black-050);
-    padding-top: 64px;
+    padding-top: 65px;
 }
 
 .pixels {
@@ -302,7 +298,7 @@ main {
             background-color: var(--black-050);
             font-family: "Silkscreen";
             text-align: center;
-            padding: 0px 0px 60px 0px;
+            padding: 20px 0px 60px 0px;
             border-bottom: 4px solid var(--opct-cream-050);
             width: 85%;
             margin: auto;
