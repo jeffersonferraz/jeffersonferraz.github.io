@@ -341,20 +341,19 @@
         <p>created by <big>Jefferson</big></p>
     </footer>
     <script>
-        // select all elements (buttons) of class 'scroll'
+        // selecting all elements (navbar buttons) of class 'scroll'
         // 'forEach' checks all selected elements and set up a 'click'-Listener to them
         document.querySelectorAll('.scroll').forEach(button => {
             button.addEventListener('click', function(event) {
 
-                // by clicking a button the following code will be run
-                event.preventDefault(); // avoid the default behaviour of the link, so it won't jump to the section but scroll smoothier
+                // by clicking a navbar button the following code will be executed
+                event.preventDefault(); // avoids the default behaviour of the link, so it won't jump to the section but scroll smoothier
 
-                const sectionId = this.getAttribute('href'); // read the 'href' attribute
-                const sectionElement = document.querySelector(sectionId); // select the target section 
-                const offset = 120; // define a distance from the top
+                const sectionId = this.getAttribute('href'); // reads the 'href' attribute
+                const sectionElement = document.querySelector(sectionId); // selects the target section 
+                const offset = 120; // defines a distance from the top
 
                 // 'getBoundingClientRect().top' reads the relative position of the visible area
-                
                 // 'bodyRect' is the distance of the '<body>' element from the top in the current viewport
                 const bodyRect = document.body.getBoundingClientRect().top; 
 
@@ -362,11 +361,7 @@
                 const sectionRect = sectionElement.getBoundingClientRect().top;
                 const position = sectionRect - bodyRect - offset;
 
-                // console.log(bodyRect);
-                // console.log(sectionRect);
-                // console.log(position);
-
-                // execute the smooth scrolling
+                // executing the smooth scrolling
                 window.scrollTo({
                     top: position,
                     behavior: 'smooth'
